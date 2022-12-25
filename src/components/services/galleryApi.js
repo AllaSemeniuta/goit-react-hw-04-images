@@ -18,9 +18,6 @@ export const fetchImg = async (page, query) => {
   obj.params.page = page;
   obj.params.q = query;
 
-  if (obj.params.q.length === 0) {
-    return;
-  }
   const response = await axios.get(BASE_URL, obj);
   console.log(response.data.hits);
 
